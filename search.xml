@@ -28,13 +28,9 @@
     <content><![CDATA[<center>**测试**</center>
 
 <a id="more"></a>
-<br>
-
 
 <div class="pdf-container" data-target="./file/p.pdf" data-height="800px"></div>
-
-
-</br>]]></content>
+]]></content>
       <tags>
         <tag>test</tag>
       </tags>
