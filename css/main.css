@@ -1030,7 +1030,7 @@ pre code {
 }
 .pdfobject-container iframe,
 .pdfobject-container embed {
-  height: 500px;
+  height: 800px;
   width: 100%;
 }
 .pagination .prev,
