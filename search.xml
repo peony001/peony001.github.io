@@ -21,13 +21,15 @@
 <ol>
 <li>SD卡格式化操作。</li>
 <li>系统烧录。</li>
-<li>SSH启动文件创建。</li>
-<li>Wi-Fi文件配置。</li>
-<li>插卡通电。</li>
-<li>使用xshell通过ssh协议进行连接。端口：22</li>
-<li>使用filzilla进行sftp协议连接。端口：22</li>
-<li>启动进行vncserver服务，安装vnc进行树莓派桌面连接显示。</li>
+<li>创建SSH启动文件。(ssh文件为空文件，文件名：ssh)</li>
+<li>烧录好的文件盘boot，放入Wi-Fi文件（wpa_supplicant.conf）。<br>“””<br>country=CN<br>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev<br>update_config=1</li>
 </ol>
+<p>network={<br>ssid=”Xiaomi_AE99” #此处是WiFi名称<br>psk=”asd88800” #wifi密码<br>key_mgmt=WPA-PSK<br>priority=1<br>}</p>
+<p>“””<br>5. 编辑完，拔掉读卡器，插卡通电。<br>6. 使用xshell通过ssh协议进行连接。端口：22<br>7. 使用filzilla进行sftp协议连接。端口：22<br>8. 安装本地vnc服务器<br>“””<br>sudo apt-get install tightvncserver</p>
+<p>tightvncserver #启动vncserver</p>
+<p>#中间会让你输入vnc服务的访问密码（输入一次，确认一次，共两次），这个密码用于远程vnc终端连接时输入。<br>#另外还可以输入一个可选的只读密码，我这里选择不设置。(就是那一次询问后设置就是只读密码)</p>
+<p>#vnc服务配置好之后，输入以下命令启动一个vnc服务：<br>vncserver :1 -geometry 1920x1080 -depth 24<br>#端口 :1  分辨率：1920*1080</p>
+<p>“””<br>9.本地路由器（查询网址:192.168.x.1）查询DHCP（此协议自动分配内网ip地址）分配的ip地址，启动本PC安装的vnc客户端，输入ip:1 （端口：1）连接桌面。<br>10.进行vnc服务连接。</p>
 <ul>
 <li>最后实验结束。</li>
 </ul>
