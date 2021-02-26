@@ -13,4 +13,28 @@
         <tag>test</tag>
       </tags>
   </entry>
+  <entry>
+    <title>树莓派4b无键盘鼠标连接操作</title>
+    <url>/2020/02/19/hello/</url>
+    <content><![CDATA[<pre><code>            # 树莓派4b无键盘鼠标安装使用手册</code></pre>
+<a id="more"></a>
+<ol>
+<li>SD卡格式化操作。</li>
+<li>系统烧录。</li>
+<li>SSH启动文件创建。</li>
+<li>Wi-Fi文件配置。</li>
+<li>插卡通电。</li>
+<li>使用xshell通过ssh协议进行连接。端口：22</li>
+<li>使用filzilla进行sftp协议连接。端口：22</li>
+<li>启动进行vncserver服务，安装vnc进行树莓派桌面连接显示。</li>
+</ol>
+<ul>
+<li>最后实验结束。</li>
+</ul>
+<p>文本编辑所用设备：AIwriter（iPad）+ 罗技k480 + HP laptop</p>
+]]></content>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
 </search>
