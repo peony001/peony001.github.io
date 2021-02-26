@@ -31,9 +31,9 @@
 <meta property="og:description" content="树莓派4b无键盘鼠标安装使用手册 所用树莓派和PC要在一个局域网（WIFI)下。">
 <meta property="og:locale">
 <meta property="article:published_time" content="2020-02-19T09:22:25.000Z">
-<meta property="article:modified_time" content="2021-02-26T07:13:03.763Z">
+<meta property="article:modified_time" content="2021-02-26T07:26:35.685Z">
 <meta property="article:author" content="Peony001">
-<meta property="article:tag" content="test">
+<meta property="article:tag" content="树莓派">
 <meta name="twitter:card" content="summary">
 
 
@@ -188,7 +188,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">树莓派4b无键盘鼠标安装使用手册</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">所用树莓派和PC要在一个局域网（WIFI)下。</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">树莓派4b无键盘鼠标安装使用手册</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">所用树莓派和PC要在一个局域网（WIFI)下。</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -211,7 +211,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -295,7 +295,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-02-26 15:13:03" itemprop="dateModified" datetime="2021-02-26T15:13:03+08:00">2021-02-26</time>
+        <time title="修改时间：2021-02-26 15:26:35" itemprop="dateModified" datetime="2021-02-26T15:26:35+08:00">2021-02-26</time>
       </span>
 
   
@@ -315,24 +315,23 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <center> <h1>树莓派4b无键盘鼠标安装使用手册</h1></center>
-<h1>所用树莓派和PC要在一个局域网（WIFI)下。</h1>
+        <center><h1>树莓派4b无键盘鼠标安装使用手册</h1></center>
+<center><h2>所用树莓派和PC要在一个局域网（WIFI)下。</h2></center>
 <a id="more"></a>
-1. SD卡格式化操作。
-2. 系统烧录。
-3. 创建SSH启动文件。(ssh文件为空文件，文件名：ssh)
-4. 烧录好的文件盘boot，放入Wi-Fi文件（wpa_supplicant.conf）。
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">country&#x3D;CN</span><br><span class="line">ctrl_interface&#x3D;DIR&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant GROUP&#x3D;netdev</span><br><span class="line">update_config&#x3D;1</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;Xiaomi_AE99&quot; #此处是WiFi名称</span><br><span class="line">psk&#x3D;&quot;asd88800&quot; #wifi密码</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-5. 编辑完，拔掉读卡器，插卡通电。
-6. 使用xshell通过ssh协议进行连接。端口：22
-7. 使用filzilla进行sftp协议连接。端口：22
-8. 安装本地vnc服务器。
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install tightvncserver</span><br><span class="line"></span><br><span class="line">tightvncserver #启动vncserver</span><br><span class="line"></span><br><span class="line">#中间会让你输入vnc服务的访问密码（输入一次，确认一次，共两次），这个密码用于远程vnc终端连接时输入。</span><br><span class="line">#另外还可以输入一个可选的只读密码，我这里选择不设置。(就是那一次询问后设置就是只读密码)</span><br><span class="line"></span><br><span class="line">#vnc服务配置好之后，输入以下命令启动一个vnc服务：</span><br><span class="line">vncserver :1 -geometry 1920x1080 -depth 24</span><br><span class="line">#端口 :1  分辨率：1920*1080</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-9.本地路由器（查询网址:192.168.x.1）查询DHCP（此协议自动分配内网ip地址）分配的ip地址，启动本PC安装的vnc客户端，输入ip:1 （端口：1）连接桌面。
-10.进行vnc服务连接。
-                                                                - 最后实验结束。
 
-
+<ol>
+<li>SD卡格式化操作。</li>
+<li>系统烧录。</li>
+<li>创建SSH启动文件。(ssh文件为空文件，文件名：ssh)</li>
+<li>烧录好的文件盘boot，放入Wi-Fi文件（wpa_supplicant.conf）。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">country&#x3D;CN</span><br><span class="line">ctrl_interface&#x3D;DIR&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant GROUP&#x3D;netdev</span><br><span class="line">update_config&#x3D;1</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;Xiaomi_AE99&quot; #此处是WiFi名称</span><br><span class="line">psk&#x3D;&quot;asd88800&quot; #wifi密码</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>编辑完，拔掉读卡器，插卡通电。</li>
+<li>使用xshell通过ssh协议进行连接。端口：22</li>
+<li>使用filzilla进行sftp协议连接。端口：22</li>
+<li>安装本地vnc服务器。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install tightvncserver</span><br><span class="line"></span><br><span class="line">tightvncserver #启动vncserver</span><br><span class="line"></span><br><span class="line">#中间会让你输入vnc服务的访问密码（输入一次，确认一次，共两次），这个密码用于远程vnc终端连接时输入。</span><br><span class="line">#另外还可以输入一个可选的只读密码，我这里选择不设置。(就是那一次询问后设置就是只读密码)</span><br><span class="line"></span><br><span class="line">#vnc服务配置好之后，输入以下命令启动一个vnc服务：</span><br><span class="line">vncserver :1 -geometry 1920x1080 -depth 24</span><br><span class="line">#端口 :1  分辨率：1920*1080</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>本地路由器（查询网址:192.168.x.1）查询DHCP（此协议自动分配内网ip地址）分配的ip地址，启动本PC安装的vnc客户端，输入ip:1 （端口：1）连接桌面。</li>
+<li>进行vnc服务连接。<pre><code>                                                         - 最后实验结束。</code></pre>
+</li>
+</ol>
 <p>文本编辑所用设备：AIwriter（iPad）+ 罗技k480 + HP laptop</p>
 
     </div>
@@ -357,7 +356,7 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/test/" rel="tag"># test</a>
+              <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" rel="tag"># 树莓派</a>
           </div>
 
         
