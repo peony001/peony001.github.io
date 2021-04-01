@@ -13,17 +13,4 @@
         <tag>树莓派</tag>
       </tags>
   </entry>
-  <entry>
-    <title>test</title>
-    <url>/2021/02/03/test/</url>
-    <content><![CDATA[<center>**测试**</center>
-
-<a id="more"></a>
-
-<div class="pdf-container" data-target="./file/p.pdf" data-height="800px"></div>
-]]></content>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
 </search>
