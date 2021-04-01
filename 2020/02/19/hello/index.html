@@ -23,15 +23,15 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#E8D7E1","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="树莓派4b无键盘鼠标安装使用手册 所用树莓派和PC要在一个局域网（WIFI)下。">
+<meta name="description" content="所用树莓派和PC要在一个局域网（WIFI)下。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="树莓派4b无键盘鼠标连接操作">
+<meta property="og:title" content="树莓派4b无键盘鼠标安装使用手册">
 <meta property="og:url" content="http://example.com/2020/02/19/hello/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="树莓派4b无键盘鼠标安装使用手册 所用树莓派和PC要在一个局域网（WIFI)下。">
+<meta property="og:description" content="所用树莓派和PC要在一个局域网（WIFI)下。">
 <meta property="og:locale">
 <meta property="article:published_time" content="2020-02-19T09:22:25.000Z">
-<meta property="article:modified_time" content="2021-04-01T06:51:48.823Z">
+<meta property="article:modified_time" content="2021-04-01T07:25:37.205Z">
 <meta property="article:author" content="Peony001">
 <meta property="article:tag" content="树莓派">
 <meta name="twitter:card" content="summary">
@@ -49,7 +49,7 @@
     lang   : 'zh-Hans'
   };
 </script>
-<title>树莓派4b无键盘鼠标连接操作 | Blog</title>
+<title>树莓派4b无键盘鼠标安装使用手册 | Blog</title>
   
 
 
@@ -188,7 +188,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">树莓派4b无键盘鼠标安装使用手册</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">所用树莓派和PC要在一个局域网（WIFI)下。</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">1.1SD卡格式化操作。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">1.2 系统烧录。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">1.3  创建SSH启动文件。(ssh文件为空文件，文件名：ssh)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">1.4  烧录好的文件盘boot，放入Wi-Fi文件（wpa_supplicant.conf）。</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%80%E7%94%A8%E6%A0%91%E8%8E%93%E6%B4%BE%E5%92%8CPC%E8%A6%81%E5%9C%A8%E4%B8%80%E4%B8%AA%E5%B1%80%E5%9F%9F%E7%BD%91%EF%BC%88WIFI-%E4%B8%8B%E3%80%82"><span class="nav-number">1.</span> <span class="nav-text">所用树莓派和PC要在一个局域网（WIFI)下。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%91%E8%8E%93%E6%B4%BE%E7%AB%AF"><span class="nav-number">2.</span> <span class="nav-text">树莓派端</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85TF%E5%8D%A1%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%93%8D%E4%BD%9C%E3%80%82"><span class="nav-number">2.1.</span> <span class="nav-text">树莓派安装TF卡格式化操作。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E7%83%A7%E5%BD%95%E3%80%82"><span class="nav-number">2.2.</span> <span class="nav-text">系统烧录。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BASSH%E5%90%AF%E5%8A%A8%E6%96%87%E4%BB%B6%E3%80%82-ssh%E6%96%87%E4%BB%B6%E4%B8%BA%E7%A9%BA%E6%96%87%E4%BB%B6%EF%BC%8C%E6%96%87%E4%BB%B6%E5%90%8D%EF%BC%9Assh"><span class="nav-number">2.3.</span> <span class="nav-text">创建SSH启动文件。(ssh文件为空文件，文件名：ssh)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%83%A7%E5%BD%95%E5%A5%BD%E7%9A%84%E6%96%87%E4%BB%B6%E7%9B%98boot%EF%BC%8C%E6%94%BE%E5%85%A5Wi-Fi%E6%96%87%E4%BB%B6%EF%BC%88wpa-supplicant-conf%EF%BC%89%E3%80%82"><span class="nav-number">2.4.</span> <span class="nav-text">烧录好的文件盘boot，放入Wi-Fi文件（wpa_supplicant.conf）。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E8%BE%91%E5%AE%8C%EF%BC%8C%E6%8B%94%E6%8E%89%E8%AF%BB%E5%8D%A1%E5%99%A8%EF%BC%8C%E6%8F%92%E5%8D%A1%E9%80%9A%E7%94%B5%E3%80%82"><span class="nav-number">2.5.</span> <span class="nav-text">编辑完，拔掉读卡器，插卡通电。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PC%E7%AB%AF%E6%93%8D%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">PC端操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8xshell%E9%80%9A%E8%BF%87ssh%E5%8D%8F%E8%AE%AE%E8%BF%9B%E8%A1%8C%E8%BF%9E%E6%8E%A5%E3%80%82%E7%AB%AF%E5%8F%A3%EF%BC%9A22"><span class="nav-number">3.1.</span> <span class="nav-text">使用xshell通过ssh协议进行连接。端口：22</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8filzilla%E8%BF%9B%E8%A1%8Csftp%E5%8D%8F%E8%AE%AE%E8%BF%9E%E6%8E%A5%E3%80%82%E7%AB%AF%E5%8F%A3%EF%BC%9A22"><span class="nav-number">3.2.</span> <span class="nav-text">使用filzilla进行sftp协议连接。端口：22</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%9C%AC%E5%9C%B0vnc%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%82"><span class="nav-number">3.3.</span> <span class="nav-text">安装本地vnc服务器。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E8%B7%AF%E7%94%B1%E5%99%A8%EF%BC%88%E6%9F%A5%E8%AF%A2%E7%BD%91%E5%9D%80-192-168-x-1%EF%BC%89%E6%9F%A5%E8%AF%A2DHCP%EF%BC%88%E6%AD%A4%E5%8D%8F%E8%AE%AE%E8%87%AA%E5%8A%A8%E5%88%86%E9%85%8D%E5%86%85%E7%BD%91ip%E5%9C%B0%E5%9D%80%EF%BC%89%E5%88%86%E9%85%8D%E7%9A%84ip%E5%9C%B0%E5%9D%80%EF%BC%8C%E5%90%AF%E5%8A%A8%E6%9C%ACPC%E5%AE%89%E8%A3%85%E7%9A%84vnc%E5%AE%A2%E6%88%B7%E7%AB%AF%EF%BC%8C%E8%BE%93%E5%85%A5ip-1-%EF%BC%88%E7%AB%AF%E5%8F%A3%EF%BC%9A1%EF%BC%89%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2%E3%80%82"><span class="nav-number">3.4.</span> <span class="nav-text">本地路由器（查询网址:192.168.x.1）查询DHCP（此协议自动分配内网ip地址）分配的ip地址，启动本PC安装的vnc客户端，输入ip:1 （端口：1）连接桌面。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9B%E8%A1%8Cvnc%E6%9C%8D%E5%8A%A1%E8%BF%9E%E6%8E%A5%E3%80%82"><span class="nav-number">3.5.</span> <span class="nav-text">进行vnc服务连接。</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -277,7 +277,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          树莓派4b无键盘鼠标连接操作
+          树莓派4b无键盘鼠标安装使用手册
         </h1>
 
         <div class="post-meta-container">
@@ -295,7 +295,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-01 14:51:48" itemprop="dateModified" datetime="2021-04-01T14:51:48+08:00">2021-04-01</time>
+        <time title="修改时间：2021-04-01 15:25:37" itemprop="dateModified" datetime="2021-04-01T15:25:37+08:00">2021-04-01</time>
       </span>
 
   
@@ -315,25 +315,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1>树莓派4b无键盘鼠标安装使用手册</h1>
-<center><h4>所用树莓派和PC要在一个局域网（WIFI)下。</h4></center>
-<a id="more"></a>
-
-<h1>1.1SD卡格式化操作。</h1>
-<h1>1.2 系统烧录。</h1>
-<h1>1.3  创建SSH启动文件。(ssh文件为空文件，文件名：ssh)</h1>
-<h1>1.4  烧录好的文件盘boot，放入Wi-Fi文件（wpa_supplicant.conf）。</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">country&#x3D;CN</span><br><span class="line">ctrl_interface&#x3D;DIR&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant GROUP&#x3D;netdev</span><br><span class="line">update_config&#x3D;1</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;Xiaomi_AE99&quot; #此处是WiFi名称</span><br><span class="line">psk&#x3D;&quot;asd88800&quot; #wifi密码</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-1.5 编辑完，拔掉读卡器，插卡通电。
-2.1 使用xshell通过ssh协议进行连接。端口：22
-2.2 使用filzilla进行sftp协议连接。端口：22
-2.3 安装本地vnc服务器。
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install tightvncserver</span><br><span class="line"></span><br><span class="line">tightvncserver #启动vncserver</span><br><span class="line"></span><br><span class="line">#中间会让你输入vnc服务的访问密码（输入一次，确认一次，共两次），这个密码用于远程vnc终端连接时输入。</span><br><span class="line">#另外还可以输入一个可选的只读密码，我这里选择不设置。(就是那一次询问后设置就是只读密码)</span><br><span class="line"></span><br><span class="line">#vnc服务配置好之后，输入以下命令启动一个vnc服务：</span><br><span class="line">vncserver :1 -geometry 1920x1080 -depth 24</span><br><span class="line">#端口 :1  分辨率：1920*1080</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-2.4 本地路由器（查询网址:192.168.x.1）查询DHCP（此协议自动分配内网ip地址）分配的ip地址，启动本PC安装的vnc客户端，输入ip:1 （端口：1）连接桌面。
-2.5 进行vnc服务连接。
-                                                                            - 最后实验结束。
-
-
+        <h3 id="所用树莓派和PC要在一个局域网（WIFI-下。"><a href="#所用树莓派和PC要在一个局域网（WIFI-下。" class="headerlink" title="所用树莓派和PC要在一个局域网（WIFI)下。"></a><center>所用树莓派和PC要在一个局域网（WIFI)下。</center></h3><a id="more"></a>
+<h3 id="树莓派端"><a href="#树莓派端" class="headerlink" title="树莓派端"></a><center>树莓派端</center></h3><h4 id="树莓派安装TF卡格式化操作。"><a href="#树莓派安装TF卡格式化操作。" class="headerlink" title="树莓派安装TF卡格式化操作。"></a>树莓派安装TF卡格式化操作。</h4><h4 id="系统烧录。"><a href="#系统烧录。" class="headerlink" title="系统烧录。"></a>系统烧录。</h4><h4 id="创建SSH启动文件。-ssh文件为空文件，文件名：ssh"><a href="#创建SSH启动文件。-ssh文件为空文件，文件名：ssh" class="headerlink" title="创建SSH启动文件。(ssh文件为空文件，文件名：ssh)"></a>创建SSH启动文件。(ssh文件为空文件，文件名：ssh)</h4><h4 id="烧录好的文件盘boot，放入Wi-Fi文件（wpa-supplicant-conf）。"><a href="#烧录好的文件盘boot，放入Wi-Fi文件（wpa-supplicant-conf）。" class="headerlink" title="烧录好的文件盘boot，放入Wi-Fi文件（wpa_supplicant.conf）。"></a>烧录好的文件盘boot，放入Wi-Fi文件（wpa_supplicant.conf）。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">country&#x3D;CN</span><br><span class="line">ctrl_interface&#x3D;DIR&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant GROUP&#x3D;netdev</span><br><span class="line">update_config&#x3D;1</span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;Xiaomi_AE99&quot; #此处是WiFi名称</span><br><span class="line">psk&#x3D;&quot;asd88800&quot; #wifi密码</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="编辑完，拔掉读卡器，插卡通电。"><a href="#编辑完，拔掉读卡器，插卡通电。" class="headerlink" title="编辑完，拔掉读卡器，插卡通电。"></a>编辑完，拔掉读卡器，插卡通电。</h4><h3 id="PC端操作"><a href="#PC端操作" class="headerlink" title="PC端操作"></a><center>PC端操作</center></h3><h4 id="使用xshell通过ssh协议进行连接。端口：22"><a href="#使用xshell通过ssh协议进行连接。端口：22" class="headerlink" title="使用xshell通过ssh协议进行连接。端口：22"></a>使用xshell通过ssh协议进行连接。端口：22</h4><h4 id="使用filzilla进行sftp协议连接。端口：22"><a href="#使用filzilla进行sftp协议连接。端口：22" class="headerlink" title="使用filzilla进行sftp协议连接。端口：22"></a>使用filzilla进行sftp协议连接。端口：22</h4><h4 id="安装本地vnc服务器。"><a href="#安装本地vnc服务器。" class="headerlink" title="安装本地vnc服务器。"></a>安装本地vnc服务器。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install tightvncserver</span><br><span class="line"></span><br><span class="line">tightvncserver #启动vncserver</span><br><span class="line"></span><br><span class="line">#中间会让你输入vnc服务的访问密码（输入一次，确认一次，共两次），这个密码用于远程vnc终端连接时输入。</span><br><span class="line">#另外还可以输入一个可选的只读密码，我这里选择不设置。(就是那一次询问后设置就是只读密码)</span><br><span class="line"></span><br><span class="line">#vnc服务配置好之后，输入以下命令启动一个vnc服务：</span><br><span class="line">vncserver :1 -geometry 1920x1080 -depth 24</span><br><span class="line">#端口 :1  分辨率：1920*1080</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="本地路由器（查询网址-192-168-x-1）查询DHCP（此协议自动分配内网ip地址）分配的ip地址，启动本PC安装的vnc客户端，输入ip-1-（端口：1）连接桌面。"><a href="#本地路由器（查询网址-192-168-x-1）查询DHCP（此协议自动分配内网ip地址）分配的ip地址，启动本PC安装的vnc客户端，输入ip-1-（端口：1）连接桌面。" class="headerlink" title="本地路由器（查询网址:192.168.x.1）查询DHCP（此协议自动分配内网ip地址）分配的ip地址，启动本PC安装的vnc客户端，输入ip:1 （端口：1）连接桌面。"></a>本地路由器（查询网址:192.168.x.1）查询DHCP（此协议自动分配内网ip地址）分配的ip地址，启动本PC安装的vnc客户端，输入ip:1 （端口：1）连接桌面。</h4><h4 id="进行vnc服务连接。"><a href="#进行vnc服务连接。" class="headerlink" title="进行vnc服务连接。"></a>进行vnc服务连接。</h4><pre><code>                                                                                 - 最后实验结束。</code></pre>
 <p>文本编辑所用设备：AIwriter（iPad）+ 罗技k480 + HP laptop</p>
 
     </div>

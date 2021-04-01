@@ -1,27 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>树莓派4b无键盘鼠标连接操作</title>
+    <title>树莓派4b无键盘鼠标安装使用手册</title>
     <url>/2020/02/19/hello/</url>
-    <content><![CDATA[<h1>树莓派4b无键盘鼠标安装使用手册</h1>
-<center><h4>所用树莓派和PC要在一个局域网（WIFI)下。</h4></center>
-<a id="more"></a>
-
-<h1>1.1SD卡格式化操作。</h1>
-<h1>1.2 系统烧录。</h1>
-<h1>1.3  创建SSH启动文件。(ssh文件为空文件，文件名：ssh)</h1>
-<h1>1.4  烧录好的文件盘boot，放入Wi-Fi文件（wpa_supplicant.conf）。</h1>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">country&#x3D;CN</span><br><span class="line">ctrl_interface&#x3D;DIR&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant GROUP&#x3D;netdev</span><br><span class="line">update_config&#x3D;1</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;Xiaomi_AE99&quot; #此处是WiFi名称</span><br><span class="line">psk&#x3D;&quot;asd88800&quot; #wifi密码</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-1.5 编辑完，拔掉读卡器，插卡通电。
-2.1 使用xshell通过ssh协议进行连接。端口：22
-2.2 使用filzilla进行sftp协议连接。端口：22
-2.3 安装本地vnc服务器。
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install tightvncserver</span><br><span class="line"></span><br><span class="line">tightvncserver #启动vncserver</span><br><span class="line"></span><br><span class="line">#中间会让你输入vnc服务的访问密码（输入一次，确认一次，共两次），这个密码用于远程vnc终端连接时输入。</span><br><span class="line">#另外还可以输入一个可选的只读密码，我这里选择不设置。(就是那一次询问后设置就是只读密码)</span><br><span class="line"></span><br><span class="line">#vnc服务配置好之后，输入以下命令启动一个vnc服务：</span><br><span class="line">vncserver :1 -geometry 1920x1080 -depth 24</span><br><span class="line">#端口 :1  分辨率：1920*1080</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-2.4 本地路由器（查询网址:192.168.x.1）查询DHCP（此协议自动分配内网ip地址）分配的ip地址，启动本PC安装的vnc客户端，输入ip:1 （端口：1）连接桌面。
-2.5 进行vnc服务连接。
-                                                                            - 最后实验结束。
-
-
+    <content><![CDATA[<h3 id="所用树莓派和PC要在一个局域网（WIFI-下。"><a href="#所用树莓派和PC要在一个局域网（WIFI-下。" class="headerlink" title="所用树莓派和PC要在一个局域网（WIFI)下。"></a><center>所用树莓派和PC要在一个局域网（WIFI)下。</center></h3><a id="more"></a>
+<h3 id="树莓派端"><a href="#树莓派端" class="headerlink" title="树莓派端"></a><center>树莓派端</center></h3><h4 id="树莓派安装TF卡格式化操作。"><a href="#树莓派安装TF卡格式化操作。" class="headerlink" title="树莓派安装TF卡格式化操作。"></a>树莓派安装TF卡格式化操作。</h4><h4 id="系统烧录。"><a href="#系统烧录。" class="headerlink" title="系统烧录。"></a>系统烧录。</h4><h4 id="创建SSH启动文件。-ssh文件为空文件，文件名：ssh"><a href="#创建SSH启动文件。-ssh文件为空文件，文件名：ssh" class="headerlink" title="创建SSH启动文件。(ssh文件为空文件，文件名：ssh)"></a>创建SSH启动文件。(ssh文件为空文件，文件名：ssh)</h4><h4 id="烧录好的文件盘boot，放入Wi-Fi文件（wpa-supplicant-conf）。"><a href="#烧录好的文件盘boot，放入Wi-Fi文件（wpa-supplicant-conf）。" class="headerlink" title="烧录好的文件盘boot，放入Wi-Fi文件（wpa_supplicant.conf）。"></a>烧录好的文件盘boot，放入Wi-Fi文件（wpa_supplicant.conf）。</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">country&#x3D;CN</span><br><span class="line">ctrl_interface&#x3D;DIR&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant GROUP&#x3D;netdev</span><br><span class="line">update_config&#x3D;1</span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;Xiaomi_AE99&quot; #此处是WiFi名称</span><br><span class="line">psk&#x3D;&quot;asd88800&quot; #wifi密码</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="编辑完，拔掉读卡器，插卡通电。"><a href="#编辑完，拔掉读卡器，插卡通电。" class="headerlink" title="编辑完，拔掉读卡器，插卡通电。"></a>编辑完，拔掉读卡器，插卡通电。</h4><h3 id="PC端操作"><a href="#PC端操作" class="headerlink" title="PC端操作"></a><center>PC端操作</center></h3><h4 id="使用xshell通过ssh协议进行连接。端口：22"><a href="#使用xshell通过ssh协议进行连接。端口：22" class="headerlink" title="使用xshell通过ssh协议进行连接。端口：22"></a>使用xshell通过ssh协议进行连接。端口：22</h4><h4 id="使用filzilla进行sftp协议连接。端口：22"><a href="#使用filzilla进行sftp协议连接。端口：22" class="headerlink" title="使用filzilla进行sftp协议连接。端口：22"></a>使用filzilla进行sftp协议连接。端口：22</h4><h4 id="安装本地vnc服务器。"><a href="#安装本地vnc服务器。" class="headerlink" title="安装本地vnc服务器。"></a>安装本地vnc服务器。</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install tightvncserver</span><br><span class="line"></span><br><span class="line">tightvncserver #启动vncserver</span><br><span class="line"></span><br><span class="line">#中间会让你输入vnc服务的访问密码（输入一次，确认一次，共两次），这个密码用于远程vnc终端连接时输入。</span><br><span class="line">#另外还可以输入一个可选的只读密码，我这里选择不设置。(就是那一次询问后设置就是只读密码)</span><br><span class="line"></span><br><span class="line">#vnc服务配置好之后，输入以下命令启动一个vnc服务：</span><br><span class="line">vncserver :1 -geometry 1920x1080 -depth 24</span><br><span class="line">#端口 :1  分辨率：1920*1080</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="本地路由器（查询网址-192-168-x-1）查询DHCP（此协议自动分配内网ip地址）分配的ip地址，启动本PC安装的vnc客户端，输入ip-1-（端口：1）连接桌面。"><a href="#本地路由器（查询网址-192-168-x-1）查询DHCP（此协议自动分配内网ip地址）分配的ip地址，启动本PC安装的vnc客户端，输入ip-1-（端口：1）连接桌面。" class="headerlink" title="本地路由器（查询网址:192.168.x.1）查询DHCP（此协议自动分配内网ip地址）分配的ip地址，启动本PC安装的vnc客户端，输入ip:1 （端口：1）连接桌面。"></a>本地路由器（查询网址:192.168.x.1）查询DHCP（此协议自动分配内网ip地址）分配的ip地址，启动本PC安装的vnc客户端，输入ip:1 （端口：1）连接桌面。</h4><h4 id="进行vnc服务连接。"><a href="#进行vnc服务连接。" class="headerlink" title="进行vnc服务连接。"></a>进行vnc服务连接。</h4><pre><code>                                                                                 - 最后实验结束。</code></pre>
 <p>文本编辑所用设备：AIwriter（iPad）+ 罗技k480 + HP laptop</p>
 ]]></content>
       <tags>
